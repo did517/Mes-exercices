@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class Calculator{
+  public static void main(String [] args){
+   Scanner input= new Scanner(System.in);
+   Welcome();
+   System.out.print("Enter the first number:");
+   int num1 = input.nextInt();
+   System.out.print("Enter the second number:");
+   int num2 = input.nextInt();
+   System.out.print("Choose an operator(+, *, -, /):");
+   int operator;
+      switch (operator){
+     case '+':
+     System.out.print("Result =" +( num1 + num2 ));
+      break;
+     case '-':
+     System.out.print("Result =" +( num1 - num2 ));
+      break;
+      case '/':
+      if (num1 == 0){
+        System.out.print("Error division");
+      }
+     if (num2 ==0){
+          System.out.print("Error division");
+      }
+      break;
+      case '*':
+      System.out.print("Result =" + ( num1 * num2));
+      break;
+    }
+        input.close();
+
+  }
+   public static void Welcome(){
+        System.out.print("Welcome to our calculator!");
+      }
+    
+    public static void multiply(int num1 , int num2){
+        System.out.print(num1 * num2);
+      }
+    public static void divide(int num1 , int num2){
+        System.out.print(num1 / num2);
+      }
+    public static void substract( int num1 , int num2){
+        System.out.print(num1 - num2);
+      }
+    public static void addition(int num1 , int num2){
+        System.out.print(num1 + num2);
+  }
+}
