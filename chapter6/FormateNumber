@@ -1,0 +1,40 @@
+public class FormatNumber {
+
+    // Méthode qui formate le nombre avec des 0 en préfixe
+    public static String format(int number, int width) {
+        String numberStr = Integer.toString(number); // convertir en chaîne
+        
+        // Si la longueur est >= width, on retourne le nombre tel quel
+        if (numberStr.length() >= width) {
+            return numberStr;
+        }
+        
+        // Sinon, on calcule combien de zéros ajouter
+        int zerosToAdd = width - numberStr.length();
+        
+        // Créer une chaîne de zéros
+        StringBuilder zeros = new StringBuilder();
+        for (int i = 0; i < zerosToAdd; i++) {
+            zeros.append('0');
+        }
+        
+        // Retourner la concaténation des zéros + nombre
+        return zeros.toString() + numberStr;
+    }
+    
+    public static void main(String[] args) {
+        java.util.Scanner input = new java.util.Scanner(System.in);
+        
+        System.out.print("Entrez un nombre : ");
+        int number = input.nextInt();
+        
+        System.out.print("Entrez la largeur désirée : ");
+        int width = input.nextInt();
+        
+        String result = format(number, width);
+        System.out.println("Résultat : " + result);
+        
+        input.close();
+    }
+}
+
