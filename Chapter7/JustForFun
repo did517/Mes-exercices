@@ -1,0 +1,30 @@
+import java.util.Scanner;
+ public class Lyrics {
+    public static void main(String [] args){
+        Scanner scanner = new Scanner(System.in);
+        String [][] lyrics ={
+            {"What color is the sky! ", "ay mi amor, ay mi amor"},
+            {"You tell me that it's red !! ", "ay mi amor, ay mi amor"},
+            {"Where should i put my shoes!","ay mi amor, ay mi amor"},
+            {"You said put them on my head!!", "ay mi amor, ay mi amor"},
+            {"You make me un poco loco!!!", "un poquititito loco"},
+            {"The whay you keep me guessing!" ,"i'm nodding and i'm yessing"},
+            {"I'll count it as blessing!!", "That i'm only un poco loco"},
+        };
+        int reponce = 0;
+        for( int i = 0; i<lyrics.length; i++){
+            System.out.println(" * "+ lyrics[i][0]);
+            String respond=scanner.nextLine();
+            if( respond.equalsIgnoreCase( " ** " +lyrics[i][0])){
+                reponce++;
+            }
+            else{
+                System.out.println(" ");
+            }
+        }
+        System.out.println("That was fun haha!");
+        System.out.println("<3");
+        scanner.close();
+    }
+    
+}
