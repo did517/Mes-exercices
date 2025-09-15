@@ -1,0 +1,75 @@
+Last login: Mon Sep 15 07:57:38 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+CS-Mac-mini-24:~ student$ pwd
+/Users/student
+CS-Mac-mini-24:~ student$ cd Desktop
+CS-Mac-mini-24:Desktop student$ ls
+Git_Ch1
+GitTest
+Screenshot 2025-09-11 at 10.57.01 AM.png
+Screenshot 2025-09-12 at 10.31.50 AM.png
+Screenshot 2025-09-12 at 10.37.13 AM.png
+Screenshot 2025-09-12 at 10.43.06 AM.png
+Screenshot 2025-09-12 at 8.17.36 AM.png
+CS-Mac-mini-24:Desktop student$ cd Git_Ch1
+CS-Mac-mini-24:Git_Ch1 student$ git clone https://github.com/CS-STech/Git-Practice-Ch1
+fatal: destination path 'Git-Practice-Ch1' already exists and is not an empty directory.
+CS-Mac-mini-24:Git_Ch1 student$ ls
+Git-Practice-Ch1
+CS-Mac-mini-24:Git_Ch1 student$ cd Git-Practice-Ch1
+CS-Mac-mini-24:Git-Practice-Ch1 student$ ls
+EmptyFile.txt	README.md	WebCourses.txt
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git config --global color.ui auto
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   WebCourses.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git add WebCourses.txt
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   WebCourses.txt
+
+CS-Mac-mini-24:Git-Practice-Ch1 student$ commit -m "Add two lines to WebCourses.txt"
+-bash: commit: command not found
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git commit -m "Add two new lines to WebCourses.txt"
+[master a8cf5bb] Add two new lines to WebCourses.txt
+ Committer: 404kevnotfound <student@CS-Mac-mini-24.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+)
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git log
+commit a8cf5bb96e35784f18372122b7258866f3b0bfca (HEAD -> master)
+Author: 404kevnotfound <student@CS-Mac-mini-24.local>
+Date:   Mon Sep 15 08:43:55 2025 -0600
+
+    Add two new lines to WebCourses.txt
+
+commit eebcb2cef33445fe99c98e07d44766f9ce6b438a (origin/master, origin/HEAD)
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 15:06:21 2018 -0600
+
+    Fixed github link
