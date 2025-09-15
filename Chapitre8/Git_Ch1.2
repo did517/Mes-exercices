@@ -1,0 +1,114 @@
+Last login: Mon Sep 15 09:46:28 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+CS-Mac-mini-24:~ student$ cd Desktop
+CS-Mac-mini-24:Desktop student$ mkdir Git_Ch1
+CS-Mac-mini-24:Desktop student$ git clone https://github.com/CS-STech/Git-Practice-Ch1
+Cloning into 'Git-Practice-Ch1'...
+remote: Enumerating objects: 25, done.
+remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 25 (from 1)
+Unpacking objects: 100% (25/25), done.
+CS-Mac-mini-24:Desktop student$ touch SoftwareCourses.txt
+CS-Mac-mini-24:Desktop student$ cd Git-Practice-Ch1
+CS-Mac-mini-24:Git-Practice-Ch1 student$ touch SoftwareCourses.txt
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	SoftwareCourses.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git rm EmptyFile.txt
+rm 'EmptyFile.txt'
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    EmptyFile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	SoftwareCourses.txt
+
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git add SoftwareCourses.txt
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	deleted:    EmptyFile.txt
+	new file:   SoftwareCourses.txt
+
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git commit -m "Remove EmptyFile.txt and Add SoftwareCourses.txt"
+[master 93bb64e] Remove EmptyFile.txt and Add SoftwareCourses.txt
+ Committer: 404kevnotfound <student@CS-Mac-mini-24.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+ delete mode 100644 EmptyFile.txt
+ create mode 100644 SoftwareCourses.txt
+CS-Mac-mini-24:Git-Practice-Ch1 student$ git log
+commit 93bb64e432d8d7bb8428cdd02f18731ae19f7ce6 (HEAD -> master)
+Author: 404kevnotfound <student@CS-Mac-mini-24.local>
+Date:   Mon Sep 15 10:10:38 2025 -0600
+
+    Remove EmptyFile.txt and Add SoftwareCourses.txt
+
+commit eebcb2cef33445fe99c98e07d44766f9ce6b438a (origin/master, origin/HEAD)
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 15:06:21 2018 -0600
+
+    Fixed github link
+
+commit 31d40bae1f5b0a0c81721300d3de613392ba526e
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 14:39:59 2018 -0600
+
+    Fixed punctuation
+
+commit b18aea6694febf629a790762cc4ffeefc580224d
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 13:56:59 2018 -0600
+
+    Update title
+
+commit d79427a8c5e5f219e785419000744cc30ae6bec0
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 13:56:39 2018 -0600
+
+    Added book name and fixed link
+
+commit 37711f61f616c391189a9b32e3e3e9d5cf1cbf2d
+Author: CS-STech <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed May 30 16:06:26 2018 -0600
+
+    Added space after number 3
+
+commit 70c93585fbe9c24803630407c32a9eeb79a9d37a
+Author: CS-STech <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed May 30 16:04:24 2018 -0600
+
+    Update README
+
+commit 863fe64eb8bd3a0ebf2698ca5c49f410c718ab13
+Au
