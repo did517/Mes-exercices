@@ -1,0 +1,45 @@
+Last login: Tue Sep 16 08:47:10 on ttys002
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+CS-Mac-mini-24:~ student$ cd Desktop
+CS-Mac-mini-24:Desktop student$ mkdir Git_Ch2
+CS-Mac-mini-24:Desktop student$ cd Git_Ch2
+CS-Mac-mini-24:Git_Ch2 student$ git clone https://github.com/CS-STech/Git-Practice-Ch2
+Cloning into 'Git-Practice-Ch2'...
+remote: Enumerating objects: 27, done.
+remote: Total 27 (delta 0), reused 0 (delta 0), pack-reused 27 (from 1)
+Unpacking objects: 100% (27/27), done.
+CS-Mac-mini-24:Git_Ch2 student$ ls
+Git-Practice-Ch2
+CS-Mac-mini-24:Git_Ch2 student$ cd Git-Practice-Ch2
+CS-Mac-mini-24:Git-Practice-Ch2 student$ ls
+images				README.md
+index.html			styles.css
+modernizr.custom.40753.js
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git add styles.css
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   styles.css
+
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git stash
+Saved working directory and index state WIP on master: 48acb70 Added index.html and images folder
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git stash list
+stash@{0}: WIP on master: 48acb70 Added index.html and images folder
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git commit "change one line in index.html"
+error: pathspec 'change one line in index.html' did not match any file(s) known to git.
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git commit -m"change one line in index html"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+	modified:   index.html
+
+no changes added to commit
+CS-Mac-mini-24:Git-Practice-Ch2 student$ 
