@@ -1,0 +1,111 @@
+Last login: Tue Sep 16 09:33:02 on ttys003
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+CS-Mac-mini-24:~ student$ cd Desktop
+CS-Mac-mini-24:Desktop student$ cd Git_Ch2
+CS-Mac-mini-24:Git_Ch2 student$ cd Git-Practice-Ch2
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git stash branch add-stylesheet stash@{0}
+M	index.html
+Switched to a new branch 'add-stylesheet'
+<stdin>:7: trailing whitespace.
+/* 
+<stdin>:8: trailing whitespace.
+   Lakeland Reeds Bed and Breakfast style sheet 
+<stdin>:9: trailing whitespace.
+   Filename: styles.css
+<stdin>:10: trailing whitespace.
+
+<stdin>:11: trailing whitespace.
+   Author:   
+warning: squelched 134 whitespace errors
+warning: 139 lines add whitespace errors.
+Unstaged changes after reset:
+M	index.html
+On branch add-stylesheet
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   styles.css
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+Dropped stash@{0} (c4f77f44095d31a5c0d8251a5390913941fbdde0)
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git commit -m"Add stylesheet file"
+[add-stylesheet 0452444] Add stylesheet file
+ Committer: 404kevnotfound <student@CS-Mac-mini-24.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 140 insertions(+)
+ create mode 100644 styles.css
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git commit -m"Replace and add lines to styles.css"
+On branch add-stylesheet
+Changes not staged for commit:
+	modified:   index.html
+
+no changes added to commit
+CS-Mac-mini-24:Git-Practice-Ch2 student$ cd Git_Ch2
+-bash: cd: Git_Ch2: No such file or directory
+CS-Mac-mini-24:Git-Practice-Ch2 student$ cd Desktop
+-bash: cd: Desktop: No such file or directory
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git checkout master
+M	index.html
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+CS-Mac-mini-24:Git_Ch2 student$ cd Git-Practice-Ch2
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git merge add-stylesheet -m "merge add-stylesheet branch into master"
+Updating 48acb70..0452444
+Fast-forward (no commit created; -m option ignored)
+ styles.css | 140 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 140 insertions(+)
+ create mode 100644 styles.css
+CS-Mac-mini-24:Git-Practice-Ch2 student$ git log
+commit 04524446b3fde3acd7077107a0169c82eec47578 (HEAD -> master, add-stylesheet)
+Author: 404kevnotfound <student@CS-Mac-mini-24.local>
+Date:   Tue Sep 16 09:40:30 2025 -0600
+
+    Add stylesheet file
+
+commit 48acb7061a7f66ab71ced20901d3e16870cd15ca (origin/master, origin/HEAD)
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Mon Aug 27 14:32:40 2018 -0600
+
+    Added index.html and images folder
+
+commit 44b6179bd147b2764553815f512f720f48a57dc6
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Mon Aug 27 14:29:33 2018 -0600
+
+    Fixed grammar issues
+
+commit 6a886c8c56250280c70b9a4bb521dda202e4e141
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Sun Jun 10 12:56:42 2018 -0600
+
+    Added Exercise Descriptions
+
+commit c3082ce20e5036e8e6d09442158c102b24a5c82d
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 14:46:05 2018 -0600
+
+    Added project description
+
+commit c9432f123e86cbaf78d2339790eca54694854f1b
+Author: Southwest Tech CS <39780590+CS-STech@users.noreply.github.com>
+Date:   Wed Jun 6 13:52:52 2018 -0600
+
+    Initial commit
